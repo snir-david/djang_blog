@@ -1,5 +1,38 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block title%}My Blog {%endblock title%}
+{% block css_files %}
+<link rel="stylesheet" href={% static "blog/index.css" %}
+{% endblock css_files %}
+{% block content %} 
+<header id="main-navigation">
+    <nav>
+        <a href="">All Posts</a>
+    </nav>
+</header>
+<section id="welcome">
+    <header>
+        <img src={% static "blog/images/max.png" %} alt="Max - The Author of Blog"/>
+    </header>
+    <p> Hi , I'm Snir</p>
+</section>
+<section id="latest-post">
+<h2>My Latest Thoughts</h2>
+<ul>
+    <li>
+        <article class="post">
+            <a href="">
+            <img src={% static "blog/images/mountains.jpg" %} alt="Mountain Hiking"/>
+            <div class="post_content">
+                <h3>Mountain Hiking</h3>
+                <p>Some post</p>
+            </div>
 
-{% block content %} Welcome to my Blog {%endblock content%}
+    </li>
+</ul>
+</section>
+
+<section id="about">
+    <h2>what I Do</h2>
+</section>
+<h1>Welcome to my Blog</h1> {%endblock content%}
